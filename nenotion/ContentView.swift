@@ -8,15 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var searchText = ""
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        VStack{
+            NavigationStack{
+                Text("Заметки")
+                    .toolbar {
+                      
+                    }
+                    .navigationBarTitle(Text("NeNotion"))
+            }.searchable(text: $searchText)
+       
+        }   
+        TabView {
+            NavigationStack() {}
+                       .tabItem {
+                           Image(systemName: "list.bullet")
+
+                       }
+            NavigationStack() {}
+                       .tabItem {
+                           Image(systemName: "square.and.pencil")
+
+                       }
+               }
+   
+ 
+  
         }
-        .padding()
-    }
 }
 
 #Preview {
