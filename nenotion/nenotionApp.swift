@@ -11,7 +11,7 @@ import SwiftUI
 struct nenotionApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NotesListView()
         }
     }
 }
