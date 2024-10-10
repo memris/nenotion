@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct NotesListView: View {
     @State var searchText = ""
 
     var body: some View {
@@ -15,61 +15,51 @@ struct ContentView: View {
             NavigationView {
                 VStack {
                     SearchBar(searchText: $searchText)
+                        .font(Theme.bodyFont)
 
                     List {
-                        Section(header: Text("Избранное")) {
+                        Section(header: Text("Избранное").font(Theme.titleFont)) {
                             ForEach(0..<3) { _ in
                                 NavigationLink(destination: Text("Текст избранной заметки")) {
-                                    Text("Избранная заметка")
+                                    Text("Избранная заметка").font(Theme.bodyFont)
                                 }
                             }
                         }
 
-                        Section(header: Text("Заметки")) {
+                        Section(header: Text("Заметки").font(Theme.titleFont)) {
                             ForEach(0..<5) { _ in
                                 NavigationLink(destination: Text("Текст заметки")) {
-                                    Text("Заметка")
+                                    Text("Заметка").font(Theme.bodyFont)
                                 }
                             }
                         }
                     }
                     .navigationTitle("NeNotion")
+                    .background(Theme.backgroundColor)
                 }
-                .background(Color(UIColor.systemGray6))
+                .background(Theme.backgroundColor)
             }
             .tabItem {
                 Image(systemName: "list.bullet")
             }
 
             NavigationView {
-                Text("Новая заметка")
+                Text("Новая заметка").font(Theme.bodyFont)
             }
             .tabItem {
                 Image(systemName: "square.and.pencil")
             }
-            
+
             NavigationView {
+                Text("Настройки профиля").font(Theme.bodyFont)
             }
             .tabItem {
                 Image(systemName: "person")
             }
         }
-        .accentColor(.black)
+        .accentColor(Theme.accentColor)
     }
 }
-
-struct SearchBar: View {
-    @Binding var searchText: String
-
-    var body: some View {
-        TextField("Найти", text: $searchText)
-            .padding(8)
-            .background(Color(UIColor.systemGray5))
-            .cornerRadius(10)
-            .padding(.horizontal)
-    }
-}
-
 #Preview {
-    ContentView()
+    NotesListView()
 }

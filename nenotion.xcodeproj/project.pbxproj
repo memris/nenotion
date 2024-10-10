@@ -7,16 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE35A3FB2CB7E6E9009B3042 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A3FA2CB7E6E9009B3042 /* Colors.swift */; };
+		CE35A3FD2CB7E71A009B3042 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A3FC2CB7E71A009B3042 /* Fonts.swift */; };
+		CE35A3FF2CB7E73C009B3042 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A3FE2CB7E73C009B3042 /* Theme.swift */; };
+		CE35A4012CB7E78F009B3042 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A4002CB7E78F009B3042 /* SearchBar.swift */; };
 		CE4129B82CB721A100C6A222 /* nenotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4129B72CB721A100C6A222 /* nenotionApp.swift */; };
-		CE4129BA2CB721A100C6A222 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4129B92CB721A100C6A222 /* ContentView.swift */; };
+		CE4129BA2CB721A100C6A222 /* NotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4129B92CB721A100C6A222 /* NotesListView.swift */; };
 		CE4129BC2CB721A300C6A222 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4129BB2CB721A300C6A222 /* Assets.xcassets */; };
 		CE4129BF2CB721A300C6A222 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4129BE2CB721A300C6A222 /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE35A3FA2CB7E6E9009B3042 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		CE35A3FC2CB7E71A009B3042 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		CE35A3FE2CB7E73C009B3042 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		CE35A4002CB7E78F009B3042 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		CE4129B42CB721A100C6A222 /* nenotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nenotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4129B72CB721A100C6A222 /* nenotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nenotionApp.swift; sourceTree = "<group>"; };
-		CE4129B92CB721A100C6A222 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE4129B92CB721A100C6A222 /* NotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListView.swift; sourceTree = "<group>"; };
 		CE4129BB2CB721A300C6A222 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE4129BE2CB721A300C6A222 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +40,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE35A3F42CB7E569009B3042 /* views */ = {
+			isa = PBXGroup;
+			children = (
+				CE4129B92CB721A100C6A222 /* NotesListView.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		CE35A3F52CB7E575009B3042 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		CE35A3F62CB7E585009B3042 /* view_models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = view_models;
+			sourceTree = "<group>";
+		};
+		CE35A3F72CB7E593009B3042 /* recources */ = {
+			isa = PBXGroup;
+			children = (
+				CE4129BB2CB721A300C6A222 /* Assets.xcassets */,
+				CE35A3FA2CB7E6E9009B3042 /* Colors.swift */,
+				CE35A3FC2CB7E71A009B3042 /* Fonts.swift */,
+			);
+			path = recources;
+			sourceTree = "<group>";
+		};
+		CE35A3F82CB7E5A1009B3042 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				CE35A4002CB7E78F009B3042 /* SearchBar.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		CE35A3F92CB7E5B7009B3042 /* theme */ = {
+			isa = PBXGroup;
+			children = (
+				CE35A3FE2CB7E73C009B3042 /* Theme.swift */,
+			);
+			path = theme;
+			sourceTree = "<group>";
+		};
 		CE4129AB2CB721A100C6A222 = {
 			isa = PBXGroup;
 			children = (
@@ -51,9 +107,13 @@
 		CE4129B62CB721A100C6A222 /* nenotion */ = {
 			isa = PBXGroup;
 			children = (
+				CE35A3F92CB7E5B7009B3042 /* theme */,
+				CE35A3F82CB7E5A1009B3042 /* components */,
+				CE35A3F72CB7E593009B3042 /* recources */,
+				CE35A3F62CB7E585009B3042 /* view_models */,
+				CE35A3F52CB7E575009B3042 /* models */,
+				CE35A3F42CB7E569009B3042 /* views */,
 				CE4129B72CB721A100C6A222 /* nenotionApp.swift */,
-				CE4129B92CB721A100C6A222 /* ContentView.swift */,
-				CE4129BB2CB721A300C6A222 /* Assets.xcassets */,
 				CE4129BD2CB721A300C6A222 /* Preview Content */,
 			);
 			path = nenotion;
@@ -137,8 +197,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE4129BA2CB721A100C6A222 /* ContentView.swift in Sources */,
+				CE35A3FD2CB7E71A009B3042 /* Fonts.swift in Sources */,
+				CE4129BA2CB721A100C6A222 /* NotesListView.swift in Sources */,
+				CE35A3FF2CB7E73C009B3042 /* Theme.swift in Sources */,
+				CE35A3FB2CB7E6E9009B3042 /* Colors.swift in Sources */,
 				CE4129B82CB721A100C6A222 /* nenotionApp.swift in Sources */,
+				CE35A4012CB7E78F009B3042 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
