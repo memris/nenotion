@@ -9,6 +9,7 @@ import SwiftUI
 
 struct NotesListView: View {
     @State var searchText = ""
+    @State private var notes: [Note] = []
 
     var body: some View {
         TabView {
@@ -19,23 +20,20 @@ struct NotesListView: View {
 
                     List {
                         Section(header: Text("Избранное").font(Theme.titleFont)) {
-                            ForEach(0..<3) { _ in
-                                NavigationLink(destination: Text("Текст избранной заметки")) {
-                                    Text("Избранная заметка").font(Theme.bodyFont)
-                                }
-                            }
                         }
 
                         Section(header: Text("Заметки").font(Theme.titleFont)) {
-                            ForEach(0..<5) { _ in
-                                NavigationLink(destination: Text("Текст заметки")) {
-                                    Text("Заметка").font(Theme.bodyFont)
+                            ForEach(notes) { note in
+                                NavigationLink(destination: Text(note.content)) {
+                                    VStack(alignment: .leading) {
+                                        Text(note.title).font(Theme.titleFont)
+                                        Text(note.content.prefix(100) + "...").font(Theme.bodyFont)
+                                    }
                                 }
                             }
                         }
                     }
                     .navigationTitle("NeNotion")
-                    .background(Theme.backgroundColor)
                 }
                 .background(Theme.backgroundColor)
             }
@@ -44,8 +42,11 @@ struct NotesListView: View {
             }
 
             NavigationView {
-                Text("Новая заметка").font(Theme.bodyFont)
+                NoteView(onSave: {
+                    newNote in notes.append(newNote)
+                }, isNewNote: true)
             }
+            
             .tabItem {
                 Image(systemName: "square.and.pencil")
             }

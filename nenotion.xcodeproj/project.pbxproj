@@ -7,10 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2E1E262CC2DA9E00BBDAE1 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2E1E252CC2DA9E00BBDAE1 /* Note.swift */; };
 		CE35A3FB2CB7E6E9009B3042 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A3FA2CB7E6E9009B3042 /* Colors.swift */; };
 		CE35A3FD2CB7E71A009B3042 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A3FC2CB7E71A009B3042 /* Fonts.swift */; };
 		CE35A3FF2CB7E73C009B3042 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A3FE2CB7E73C009B3042 /* Theme.swift */; };
 		CE35A4012CB7E78F009B3042 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A4002CB7E78F009B3042 /* SearchBar.swift */; };
+		CE35A4032CB9AE7A009B3042 /* NoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE35A4022CB9AE7A009B3042 /* NoteView.swift */; };
 		CE4129B82CB721A100C6A222 /* nenotionApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4129B72CB721A100C6A222 /* nenotionApp.swift */; };
 		CE4129BA2CB721A100C6A222 /* NotesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4129B92CB721A100C6A222 /* NotesListView.swift */; };
 		CE4129BC2CB721A300C6A222 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE4129BB2CB721A300C6A222 /* Assets.xcassets */; };
@@ -18,10 +20,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE2E1E252CC2DA9E00BBDAE1 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		CE35A3FA2CB7E6E9009B3042 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		CE35A3FC2CB7E71A009B3042 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		CE35A3FE2CB7E73C009B3042 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		CE35A4002CB7E78F009B3042 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		CE35A4022CB9AE7A009B3042 /* NoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteView.swift; sourceTree = "<group>"; };
 		CE4129B42CB721A100C6A222 /* nenotion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = nenotion.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE4129B72CB721A100C6A222 /* nenotionApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nenotionApp.swift; sourceTree = "<group>"; };
 		CE4129B92CB721A100C6A222 /* NotesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotesListView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 			isa = PBXGroup;
 			children = (
 				CE4129B92CB721A100C6A222 /* NotesListView.swift */,
+				CE35A4022CB9AE7A009B3042 /* NoteView.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -51,6 +56,7 @@
 		CE35A3F52CB7E575009B3042 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				CE2E1E252CC2DA9E00BBDAE1 /* Note.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 			dependencies = (
 			);
 			name = nenotion;
+			packageProductDependencies = (
+			);
 			productName = nenotion;
 			productReference = CE4129B42CB721A100C6A222 /* nenotion.app */;
 			productType = "com.apple.product-type.application";
@@ -171,6 +179,8 @@
 				Base,
 			);
 			mainGroup = CE4129AB2CB721A100C6A222;
+			packageReferences = (
+			);
 			productRefGroup = CE4129B52CB721A100C6A222 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -200,8 +210,10 @@
 				CE35A3FD2CB7E71A009B3042 /* Fonts.swift in Sources */,
 				CE4129BA2CB721A100C6A222 /* NotesListView.swift in Sources */,
 				CE35A3FF2CB7E73C009B3042 /* Theme.swift in Sources */,
+				CE2E1E262CC2DA9E00BBDAE1 /* Note.swift in Sources */,
 				CE35A3FB2CB7E6E9009B3042 /* Colors.swift in Sources */,
 				CE4129B82CB721A100C6A222 /* nenotionApp.swift in Sources */,
+				CE35A4032CB9AE7A009B3042 /* NoteView.swift in Sources */,
 				CE35A4012CB7E78F009B3042 /* SearchBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
