@@ -33,6 +33,7 @@ struct NotesListView: View {
                             }
                         }
                     }
+                    .listStyle(.plain)
                     .navigationTitle("NeNotion")
                 }
                 .background(Theme.backgroundColor)
