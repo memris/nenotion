@@ -11,6 +11,7 @@ struct NoteView: View {
   
     @State private var title: String = ""
     @State private var content: String = ""
+    @FocusState private var isFocused: Bool
     var onSave: (Note) -> Void
     var isNewNote: Bool
 
@@ -22,6 +23,7 @@ struct NoteView: View {
                 .padding()
                 .cornerRadius(10)
                 .frame(height: 70)
+                .focused($isFocused)
                 .onTapGesture {
                     if title == "Заголовок" {
                         title = ""
@@ -33,11 +35,17 @@ struct NoteView: View {
                 .foregroundColor(content.isEmpty ? .gray : .primary)
                 .padding()
                 .cornerRadius(10)
+                .focused($isFocused)
                 .onTapGesture {
                     if content == "Содержимое" {
                         content = ""
                     }
                 }
+            Button(action: {
+                DispatchQueue.main.async { isFocused = false}
+               
+            }) {Text("Скрыть клавиатуру")}
+                .padding(.top)
         }
         .padding()
         .onAppear {

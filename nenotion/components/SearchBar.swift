@@ -13,8 +13,9 @@ struct SearchBar: View {
     var body: some View {
         TextField("Найти", text: $searchText)
             .padding(8)
-            .background(Color(UIColor.systemGray5))
+            .background(Theme.whiteText)
             .cornerRadius(10)
             .padding(.horizontal)
+            .foregroundColor(Theme.grayText)
     }
 }
